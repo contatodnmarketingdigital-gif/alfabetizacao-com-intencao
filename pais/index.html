@@ -180,6 +180,14 @@ section{padding:72px 0}
 .txt-bom{font:700 21px Inter;fill:var(--verde)}
 .fim-bom{font:700 28px Fraunces,serif;fill:var(--terra);text-anchor:middle}
 
+
+/* tarja "ao vivo" do topo */
+.tarja-vivo{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:#fff;border-radius:999px;
+  padding:9px 16px;font:700 13px/1.35 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px;
+  box-shadow:0 6px 16px -8px rgba(184,90,51,.8)}
+.tarja-vivo .ponto{flex:0 0 10px;height:10px;border-radius:50%;background:#fff;animation:pulsa 1.4s ease-in-out infinite}
+@keyframes pulsa{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+
 /* preço */
 .preco{background:linear-gradient(180deg,var(--creme),var(--papel));text-align:center}
 .preco .lead{margin:0 auto 28px}
@@ -247,7 +255,7 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="hero-txt">
-      <p class="eyebrow">Ao vivo e online · sábado, 14 de novembro, às 9h · com gravação</p>
+      <p class="tarja-vivo"><span class="ponto"></span>Ao vivo e online · sábado, 14 de novembro, às 9h · com gravação</p>
       <p class="gancho" data-hero-gancho>Você já tentou de tudo? Talvez o que falte não seja mais uma atividade.</p>
       <p class="nome-ws">Workshop Alfabetização com Intenção</p>
       <h1>Ajude seu filho a avançar na leitura sabendo exatamente qual é o próximo passo para ele.</h1>
