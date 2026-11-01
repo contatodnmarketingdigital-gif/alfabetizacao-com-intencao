@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Alfabetização com Intenção · Workshop para famílias</title>
+<meta name="description" content="Num sábado de aula ao vivo, a professora Taline Nogueira ensina famílias a observar a criança, escolher a ajuda certa e acompanhar cada avanço em casa, inclusive quando ela tem necessidades específicas de aprendizagem.">
+<meta property="og:title" content="Alfabetização com Intenção · Workshop para famílias">
+<meta property="og:description" content="Num sábado de aula ao vivo, a professora Taline Nogueira ensina famílias a observar a criança, escolher a ajuda certa e acompanhar cada avanço em casa, inclusive quando ela tem necessidades específicas de aprendizagem.">
+<meta property="og:image" content="img/taline-turma.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#FBF6EE; --papel:#F3EADB; --tinta:#2B2622; --suave:#6B6058;
+  --terra:#B85A33; --terra-esc:#9A4524; --verde:#1F4D3F; --verde-cl:#E4EDE8; --linha:#E2D6C4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--creme);color:var(--tinta);font:400 17px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.estreito{max-width:720px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:650;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(34px,6vw,58px)}
+h2{font-size:clamp(28px,4.2vw,42px);margin-bottom:20px}
+h3{font-size:22px;margin-bottom:10px}
+p+p{margin-top:14px}
+section{padding:72px 0}
+.eyebrow{font:600 13px/1.4 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
+.eyebrow.claro{color:#F2C9A8}
+.lead{font-size:19px;color:var(--suave);max-width:720px;margin-bottom:32px}
+.mini{font-size:13px;color:var(--suave);margin-top:12px}
+.pendente{background:#FFF0B3;color:#7A5B00;padding:2px 6px;border-radius:4px;font-size:14px}
+
+.cta{display:inline-block;background:var(--terra);color:#fff;text-decoration:none;font-weight:700;font-size:18px;
+  padding:18px 30px;border-radius:999px;margin-top:26px;box-shadow:0 8px 22px -10px rgba(184,90,51,.7);transition:.2s}
+.cta:hover{background:var(--terra-esc);transform:translateY(-1px)}
+.cta-fixo{display:none}
+
+/* hero */
+.hero{padding:40px 0 64px;background:linear-gradient(180deg,var(--papel),var(--creme))}
+.hero-grid{display:grid;gap:36px;align-items:center}
+.hero .sub{font-size:20px;color:var(--suave);margin-top:20px;max-width:560px}
+.hero-foto img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 60px -30px rgba(43,38,34,.45)}
+
+/* dor */
+.duas{display:grid;gap:40px;align-items:center}
+.check{list-style:none;margin-top:24px}
+.check li{padding:12px 0 12px 34px;border-top:1px solid var(--linha);position:relative}
+.check li:before{content:"";position:absolute;left:4px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--terra)}
+.foto-papel img{border-radius:16px;transform:rotate(-1.5deg);box-shadow:0 20px 40px -24px rgba(43,38,34,.5);border:8px solid #fff}
+
+.falha{background:#fff}
+.falha h2{color:var(--verde)}
+
+/* mecanismo */
+.mecanismo{background:var(--verde);color:#F4EFE6}
+.mecanismo h2{color:#fff}
+.mecanismo .lead{color:#CFDDD6}
+.ciclo{display:grid;gap:36px;align-items:center}
+.ciclo-svg{width:100%;max-width:520px;margin:0 auto}
+.trilho{fill:none;stroke:#F2C9A8;stroke-width:2;stroke-dasharray:4 7}
+.no{fill:var(--terra);stroke:#F4EFE6;stroke-width:3}
+.num{fill:#fff;font:700 19px Inter;text-anchor:middle}
+.rot{fill:#F4EFE6;font:600 21px Inter}
+.centro{fill:#fff;font:650 34px Fraunces,serif;text-anchor:middle}
+.centro-sub{fill:#CFDDD6;font:500 15px Inter;text-anchor:middle}
+.passos{list-style:none;display:grid;gap:10px}
+.passos li{background:rgba(255,255,255,.07);border-radius:12px;padding:12px 16px;display:flex;flex-direction:column}
+.passos b{color:#F2C9A8;font-weight:600}
+.passos span{font-size:15px;color:#DCE6E1}
+
+/* fundamentação */
+.cards4{display:grid;gap:16px}
+.card{background:#fff;border:1px solid var(--linha);border-radius:16px;padding:24px}
+.card h3{color:var(--verde);font-size:20px}
+
+/* prova */
+.prova{background:var(--papel)}
+.nums{display:grid;gap:16px;margin-bottom:32px}
+.num-card{background:#fff;border-radius:18px;padding:26px;border-left:6px solid var(--terra)}
+.num-card strong{display:block;font:650 44px/1 Fraunces,serif;color:var(--terra);margin-bottom:8px}
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.galeria img{aspect-ratio:3/4;object-fit:cover;border-radius:12px;border:6px solid #fff}
+
+/* programa */
+.encontro{background:#fff;border-radius:18px;padding:28px;border:1px solid var(--linha);align-self:stretch}
+.encontro h3{color:var(--terra)}
+.encontro ul{list-style:none}
+.encontro li{padding:9px 0;border-top:1px dashed var(--linha);font-size:16px}
+
+/* oferta */
+.oferta{background:#fff}
+.kit{list-style:none}
+.kit li{padding:14px 0 14px 40px;border-bottom:1px solid var(--linha);position:relative}
+.kit li:before{content:"✓";position:absolute;left:0;top:12px;width:26px;height:26px;border-radius:50%;background:var(--verde-cl);color:var(--verde);font-weight:700;text-align:center;line-height:26px;font-size:14px}
+
+.paraquem .sim,.paraquem .nao{border-radius:18px;padding:28px;align-self:stretch}
+.paraquem .sim{background:var(--verde-cl)}
+.paraquem .nao{background:#F6E6DE}
+.paraquem ul{padding-left:20px}
+.paraquem li{margin:8px 0}
+
+
+/* autoridade */
+.autoridade{background:#fff}
+.autoridade .duas{align-items:start}
+.foto-taline img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 60px -30px rgba(43,38,34,.45)}
+.autoridade h2{color:var(--verde)}
+.creds{list-style:none;margin:22px 0;display:grid;gap:8px}
+.creds li{background:var(--papel);border-radius:12px;padding:11px 14px 11px 40px;position:relative;font-weight:500}
+.creds li:before{content:"";position:absolute;left:15px;top:19px;width:10px;height:10px;border-radius:50%;background:var(--terra)}
+.livros img{border-radius:14px;max-height:220px;width:100%;object-fit:cover}
+.livros figcaption{font-size:13px;color:var(--suave);margin-top:6px}
+
+
+/* blocos v2 */
+.gancho{font:600 clamp(20px,2.6vw,26px)/1.3 Fraunces,serif;color:var(--terra-esc);font-style:italic;margin-bottom:12px;max-width:620px}
+.chip-lote{display:inline-block;margin-top:14px;background:#fff;border:1px solid var(--linha);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;color:var(--terra-esc)}
+.chip-lote:empty{display:none}
+.dor h2{max-width:760px}
+.cartoes{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:8px 0 34px}
+.cartoes li{background:#fff;border:1px solid var(--linha);border-radius:14px;padding:14px 16px;font-weight:600;font-size:15px}
+.citacao{margin-top:26px;background:var(--verde);color:#fff;border-radius:18px;padding:22px 24px}
+.citacao p{font:600 19px/1.4 Fraunces,serif}
+.citacao p+p{font:400 16px/1.5 Inter,sans-serif;color:#CFDDD6;margin-top:10px}
+.contraste{background:#fff;padding-top:0}
+.lado{border-radius:18px;padding:24px}
+.lado.ruim{background:#F6E6DE}.lado.bom{background:var(--verde-cl)}
+.rotulo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.ruim .rotulo{color:var(--terra-esc)}.bom .rotulo{color:var(--verde)}
+.fila{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.fila li{background:#fff;border-radius:999px;padding:8px 14px;font-weight:600;font-size:15px}
+.fila li+li:before{content:"→ ";color:var(--suave)}
+.nota{font-size:14px;color:var(--suave);margin:-14px 0 26px;font-style:italic}
+.centro{text-align:center}
+.faixa{background:var(--terra);color:#fff;text-align:center;padding:56px 0}
+.faixa h2{color:#fff;margin-bottom:10px}
+.faixa p{font-size:19px;color:#FBE7DA}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.chips li{background:var(--verde-cl);color:var(--verde);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.antesdepois{background:var(--papel);padding:56px 0}
+.ad-grid{display:grid;gap:12px;align-items:center}
+.ad{border-radius:18px;padding:22px}
+.ad span{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.ad p{font:600 22px/1.3 Fraunces,serif;margin-top:6px}
+.ad.antes{background:#fff;color:var(--suave)}.ad.depois{background:var(--verde);color:#fff}
+.ad.depois span{color:#F2C9A8}
+.seta{text-align:center;font-size:28px;color:var(--terra)}
+.decidir{background:#fff}
+.decidir ul{list-style:none}
+.decidir li{padding:14px 0;border-bottom:1px solid var(--linha)}
+.garantia{display:flex;gap:14px;align-items:center;text-align:left;background:var(--verde-cl);border-radius:16px;padding:16px;margin-top:22px}
+.garantia p{font-size:15px}
+.selo{flex:0 0 52px;height:52px;border-radius:50%;background:var(--verde);color:#fff;font:650 24px/52px Fraunces,serif;text-align:center}
+.lote.ativo{opacity:1;border:2px solid var(--terra);background:#FFF8F2}
+.lote.passou .lote-valor{text-decoration:line-through}
+.aut-grid{display:grid;gap:36px;align-items:start}
+.foto-taline img{max-height:620px;width:100%;object-fit:cover;object-position:50% 20%;border-radius:22px}
+.barra-fixa{display:none}
+
+/* preço */
+.preco{background:linear-gradient(180deg,var(--creme),var(--papel));text-align:center}
+.preco .lead{margin:0 auto 28px}
+.caixa-preco{background:#fff;border-radius:24px;padding:34px 22px;box-shadow:0 30px 60px -36px rgba(43,38,34,.5);border:2px solid var(--terra)}
+.evento{font-weight:600;color:var(--verde);margin-bottom:20px}
+.lotes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.lote{border:1px solid var(--linha);border-radius:14px;padding:16px 10px;display:flex;flex-direction:column;opacity:.55}
+.lote.ativo{opacity:1;border:2px solid var(--terra);background:#FFF8F2}
+.lote-nome{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--suave)}
+.lote-valor{font:650 clamp(22px,6vw,32px)/1.2 Fraunces,serif;color:var(--tinta);white-space:nowrap}
+.lote-prazo{font-size:13px;color:var(--suave)}
+.parcela{margin-top:14px;color:var(--suave)}
+
+/* faq */
+details{background:#fff;border:1px solid var(--linha);border-radius:14px;margin-bottom:10px;padding:18px 20px}
+summary{font-weight:600;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";float:right;color:var(--terra);font-size:22px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{margin-top:12px;color:var(--suave)}
+
+.fechamento{background:var(--verde);color:#F4EFE6;text-align:center}
+.fechamento h2{color:#fff}
+footer{padding:28px 0 100px;font-size:13px;color:var(--suave);text-align:center}
+
+@media (min-width:860px){
+  .hero{padding:72px 0 88px}
+  .hero-grid{grid-template-columns:1.15fr .85fr}
+  .duas{grid-template-columns:1fr 1fr}
+  .ciclo{grid-template-columns:1fr 1fr}
+  .cards4{grid-template-columns:repeat(4,1fr)}
+  .nums{grid-template-columns:1fr 1fr}
+  .aut-grid{grid-template-columns:.8fr 1.2fr}
+  .cartoes{grid-template-columns:repeat(3,1fr)}
+  .ad-grid{grid-template-columns:1fr auto 1fr}
+  section{padding:96px 0}
+  footer{padding-bottom:40px}
+}
+@media (max-width:859px){
+  .barra-fixa{display:flex;align-items:center;justify-content:space-between;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:9;
+    background:#fff;padding:10px 12px;box-shadow:0 -8px 24px -10px rgba(0,0,0,.25);transform:translateY(110%);transition:transform .3s}
+  .barra-fixa.on{transform:none}
+  .barra-fixa span{font-size:14px;line-height:1.3;font-weight:600}
+  .cta-barra{background:var(--terra);color:#fff;font-weight:700;padding:12px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+  .cartoes{grid-template-columns:1fr 1fr}
+  .cta{display:block;text-align:center}
+  .hero{padding-top:28px}
+  .hero-foto img{aspect-ratio:4/3}
+}
+</style>
+<!-- Meta Pixel: preencher pixel_id em config.json -->
+<script>
+(function(){var id="";if(!id)return;
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
+</script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <p class="eyebrow">Workshop ao vivo e online · sábado, 14 de novembro, às 9h · com gravação</p>
+      <p class="gancho" data-hero-gancho>Você já tentou de tudo? Talvez o que falte não seja mais uma atividade.</p>
+      <h1>Descubra o que seu filho já sabe e qual é o próximo passo para ele avançar na leitura.</h1>
+      <p class="sub">Num sábado de aula ao vivo, a professora Taline Nogueira ensina famílias a observar a criança, escolher a ajuda certa e acompanhar cada avanço em casa, inclusive quando ela tem necessidades específicas de aprendizagem.</p>
+      <a class="cta" href="#LINK-GREENN" data-cta>Quero minha vaga no workshop</a>
+      <p class="chip-lote" data-lote-chip></p>
+    </div>
+    <figure class="hero-foto"><img src="img/taline-aluna.jpg" alt="Professora Taline Nogueira em sala de aula"></figure>
+  </div>
+</header>
+
+<section class="dor"><div class="wrap">
+  <h2>Você sente que está tentando ajudar, mas não sabe se está ajudando de verdade?</h2>
+  <ul class="cartoes"><li>Atividades da internet</li><li>Jogos</li><li>Apostilas</li><li>Vídeos</li><li>Tarefas da escola</li><li>Reforço e materiais diversos</li></ul>
+  <div class="duas">
+    <div>
+      <ul class="check"><li>Reconhece as letras, mas não junta para ler.</li><li>A hora da lição vira choro. Dele e, às vezes, seu. E depois vem a culpa.</li><li>A escola diz que ele "não acompanha", e ninguém diz o que fazer em casa.</li><li>Você está esperando a consulta que não chega, e o tempo passando.</li></ul>
+      <blockquote class="citacao"><p>Hoje ele faz. Amanhã parece que esqueceu.</p><p>"Ele está aprendendo… mas eu não sei exatamente o quê."</p></blockquote></div>
+    <figure class="foto-papel"><img src="img/diagnostico.jpg" alt="Atividades de alfabetização"></figure>
+  </div>
+</div></section>
+
+<section class="falha"><div class="wrap estreito">
+  <h2>O problema talvez não seja falta de atividades. É falta de um caminho claro.</h2><p>Quando uma criança não aprende, a primeira conclusão costuma ser: ela não consegue. Quase sempre, é outra coisa.</p>
+<p>Pode ser que o passo tenha sido grande demais. Pode ser que faltasse algo que vem antes. Pode ser que a ajuda oferecida não fosse a ajuda de que ela precisava. Ou ela simplesmente ainda não teve tempo de deixar firme o que aprendeu.</p>
+<p>Nenhuma dessas quatro coisas é falta de capacidade. E todas têm solução, desde que alguém saiba identificar qual delas está acontecendo.</p>
+</div></section>
+
+<section class="contraste"><div class="wrap">
+  <div class="duas">
+    <div class="lado ruim"><p class="rotulo">Como costuma ser</p><ol class="fila ruim"><li>Atividades aleatórias</li><li>Dúvida</li><li>Frustração</li></ol></div>
+    <div class="lado bom"><p class="rotulo">Como pode ser</p><ol class="fila bom"><li>Olhar o que ele já faz</li><li>Achar o próximo passo</li><li>Ajudar do jeito certo</li><li>Ver se ficou firme</li><li>Avançar</li></ol></div>
+  </div>
+</div></section>
+
+<section class="mecanismo"><div class="wrap">
+  <p class="eyebrow claro">O método</p>
+  <h2>O Ciclo da Alfabetização com Intenção</h2>
+  <p class="lead">Não existe uma atividade certa para toda criança. Existe uma criança. Existe o que ela já sabe. Existe o que ela ainda precisa aprender. E existe o próximo passo. O ciclo recomeça a cada resposta dela.</p>
+  <div class="ciclo"><svg viewBox="-100 -40 800 680" class="ciclo-svg" role="img" aria-label="Ciclo da Alfabetização com Intenção"><circle cx="300" cy="300" r="180" class="trilho"/><text x="300" y="292" class="centro">O ciclo</text><text x="300" y="324" class="centro-sub">recomeça a cada resposta</text><g><circle cx="300" cy="120" r="22" class="no"/><text x="300" y="127" class="num">1</text><text x="300" y="86" class="rot" text-anchor="middle"><tspan x="300" dy="0">Olhar</tspan></text></g><g><circle cx="471" cy="244" r="22" class="no"/><text x="471" y="251" class="num">2</text><text x="505" y="240" class="rot" text-anchor="start"><tspan x="505" dy="0">Achar o</tspan><tspan x="505" dy="26">próximo passo</tspan></text></g><g><circle cx="406" cy="446" r="22" class="no"/><text x="406" y="453" class="num">3</text><text x="440" y="442" class="rot" text-anchor="start"><tspan x="440" dy="0">Ajudar do</tspan><tspan x="440" dy="26">jeito certo</tspan></text></g><g><circle cx="194" cy="446" r="22" class="no"/><text x="194" y="453" class="num">4</text><text x="160" y="442" class="rot" text-anchor="end"><tspan x="160" dy="0">Ver se ficou</tspan><tspan x="160" dy="26">firme</tspan></text></g><g><circle cx="129" cy="244" r="22" class="no"/><text x="129" y="251" class="num">5</text><text x="95" y="252" class="rot" text-anchor="end"><tspan x="95" dy="0">Avançar</tspan></text></g></svg><ol class="passos"><li><b>1. Olhar</b><span>o que ele já faz sozinho?</span></li><li><b>2. Achar o próximo passo</b><span>o que vem logo depois disso?</span></li><li><b>3. Ajudar do jeito certo</b><span>nem de mais, nem de menos.</span></li><li><b>4. Ver se ficou firme</b><span>ele lembra amanhã, sem ajuda?</span></li><li><b>5. Avançar</b><span>só quando ficou firme.</span></li></ol></div>
+</div></section>
+
+<section class="prova"><div class="wrap">
+  <h2>Quem já viu o ciclo funcionando</h2>
+  <p class="lead">Este não é um método de livro. É a forma como a Taline trabalha na turma de 1º ano dela, numa escola municipal, com crianças que começaram de pontos muito diferentes.</p>
+  <div class="nums"><div class="num-card"><strong>23 de 23</strong><span>todos os alunos da turma leem, cada um no seu nível.</span></div><div class="num-card"><strong>19 de 23</strong><span>escrevem frases próprias, sem cópia.</span></div></div><p class="nota">Resultado da turma da Taline ao longo do ano letivo, com intervenção diária. O workshop ensina o raciocínio que ela usa; não promete prazo de leitura. <span class="pendente">[PREENCHER: 1 depoimento de mãe, de preferência de criança de 8 a 10 anos, com autorização]</span></p>
+  <div class="galeria"><img src="img/escrita-espontanea.jpg" alt="Produção de aluno da turma da professora Taline"><img src="img/producao-texto.jpg" alt="Produção de aluno da turma da professora Taline"><img src="img/materiais.jpg" alt="Produção de aluno da turma da professora Taline"></div>
+</div></section>
+
+<section class="autoridade"><div class="wrap aut-grid">
+  <figure class="foto-taline"><img src="img/taline-pro-2.jpg" alt="Professora Taline Nogueira"></figure>
+  <div>
+    <p class="eyebrow">Sua professora</p>
+    <h2>Quem é a Taline Nogueira</h2>
+    <p>Professora, facilitadora e especialista em Neurociência e Educação, com atuação em alfabetização, aprendizagem e inclusão. Hoje alfabetiza uma turma de 1º ano numa escola municipal, com crianças que aprendem de jeitos muito diferentes.</p>
+<p>O que ela ensina no workshop é o que ela faz toda manhã: olhar para a criança antes de olhar para a atividade.</p>
+    <ul class="creds"><li>Especialista em Neurociência e Educação</li><li><span class="pendente">[CONFIRMAR: mestrado — curso e instituição]</span></li><li>3 anos na Educação Especial</li><li>7 anos acompanhando crianças em reforço escolar</li><li>Autora dos livros Alfabetização Fônica, Fluência Leitora e Gêneros Textuais</li><li>À frente da A+ Assessoria Educacional <span class="pendente">[CONFIRMAR]</span></li></ul>
+    <figure class="livros"><img src="img/livros.jpg" alt="Livros da professora Taline Nogueira"><figcaption>Os livros da Taline, usados na turma dela</figcaption></figure>
+    <a class="cta" href="#LINK-GREENN" data-cta>Quero minha vaga no workshop</a>
+  </div>
+</div></section>
+
+<section class="faixa"><div class="wrap estreito">
+  <h2>Você não precisa ser professora</h2><p>Você precisa aprender a ajudar do jeito certo. A Taline explica sem termos difíceis, com exemplos de crianças reais.</p>
+</div></section>
+
+<section class="oferta"><div class="wrap estreito">
+  <h2>Você não vai receber apenas mais uma pasta de atividades.</h2><ul class="chips"><li>Por que fazer</li><li>O que observar</li><li>Como ajudar</li><li>Quando repetir</li><li>Como saber se aprendeu</li><li>Quando avançar</li></ul>
+  <ul class="kit"><li>Um sábado de aula ao vivo com a professora Taline — você entende o processo, não só a atividade.</li><li>Gravação para rever com calma <span class="pendente">[CONFIRMAR: 30 dias]</span> — assista o que der ao vivo e o resto à noite.</li><li>Ficha de Avaliação Inicial — para descobrir, em casa, em que ponto ele está.</li><li>Mapa do Próximo Passo — para decidir o que trabalhar a seguir, sem chutar.</li><li>As fichas de acompanhamento e a apostila da Taline — para registrar o que ele já firmou.</li><li>Perguntas ao vivo — leve a situação do seu filho.</li></ul>
+</div></section>
+
+<section class="antesdepois"><div class="wrap estreito">
+  <div class="ad-grid">
+    <div class="ad antes"><span>Antes</span><p>"Qual atividade eu faço hoje?"</p></div>
+    <div class="seta">→</div>
+    <div class="ad depois"><span>Depois</span><p>"Qual habilidade meu filho precisa desenvolver agora?"</p></div>
+  </div>
+</div></section>
+
+<section class="preco" id="vagas"><div class="wrap estreito">
+  <h2>Garanta sua vaga</h2>
+  <p class="lead">Por R$ 67, o preço de uma apostila. A diferença é que, depois deste sábado, você sabe qual atividade faz sentido para ele agora, e qual não faz.</p>
+  <div class="caixa-preco">
+    <p class="evento">Sábado, 14 de novembro · ao vivo e online · 9h às 12h e 13h às 16h</p>
+    <div class="lotes"><div class="lote" data-ate="2026-11-05"><span class="lote-nome">1º lote</span><span class="lote-valor">R$ 67</span><span class="lote-prazo">até 5/11</span></div><div class="lote" data-ate="2026-11-10"><span class="lote-nome">2º lote</span><span class="lote-valor">R$ 87</span><span class="lote-prazo">6 a 10/11</span></div><div class="lote" data-ate="2026-11-14"><span class="lote-nome">3º lote</span><span class="lote-valor">R$ 97</span><span class="lote-prazo">11 a 14/11</span></div></div>
+    <p class="parcela">Pix ou cartão · o preço sobe a cada lote</p>
+    <a class="cta" href="#LINK-GREENN" data-cta>Garantir minha vaga</a>
+    <div class="garantia"><span class="selo">7</span><p><strong>Garantia de 7 dias.</strong> Participe do workshop. Se achar que não valeu o seu sábado, peça o reembolso pela Greenn e devolvemos 100% do valor. Sem formulário, sem justificativa.</p></div>
+    <p class="mini">Pagamento seguro · Pix ou cartão · acesso enviado no e-mail e WhatsApp</p>
+  </div>
+</div></section>
+
+<section class="paraquem"><div class="wrap duas">
+  <div class="sim"><h3>É para você se</h3><ul><li>Acompanha uma criança em alfabetização e quer entender o que está acontecendo.</li><li>Cansou de trocar de atividade sem saber se está ajudando.</li><li>A criança aprende num tempo diferente e você quer um caminho, não uma receita.</li></ul></div>
+  <div class="nao"><h3>Não é para você se</h3><ul><li>Procura uma lista de atividades prontas para imprimir.</li><li>Espera uma promessa de que ele vai ler em X dias. Ninguém sério promete isso.</li><li>Procura algo para substituir a escola ou os profissionais que acompanham a criança.</li></ul></div>
+</div></section>
+
+<section class="programa"><div class="wrap">
+  <h2>O que você vai aprender no sábado</h2><div class="duas"><div class="encontro"><h3>Manhã · Entender para ensinar</h3><ul><li>Por que mais atividade nem sempre ajuda, e o que olhar antes de escolher a próxima.</li><li>Por que ele faz hoje e esquece amanhã, explicado sem termos difíceis.</li><li>Como observar o que ele já sabe: letras, sons, sílabas, leitura e escrita.</li><li>Do que ele sabe ao próximo passo: o menor passo possível entre os dois.</li></ul></div><div class="encontro"><h3>Tarde · Ensinar para firmar</h3><ul><li>Diminuir a dificuldade sem diminuir o que ele pode aprender.</li><li>Ensinar pelos olhos, ouvidos e mãos, com propósito, não como enfeite.</li><li>Como saber se ele realmente aprendeu, ou só acertou com ajuda.</li><li>Quando é hora de voltar uma etapa, e quando é hora de avançar.</li><li>Perguntas ao vivo: traga a situação do seu filho.</li></ul></div></div>
+</div></section>
+
+<section class="faq"><div class="wrap estreito"><h2>Dúvidas</h2><details><summary>Não consigo ficar as 6 horas no sábado. E agora?</summary><p>Tudo bem. A aula fica gravada <span class="pendente">[CONFIRMAR: por 30 dias]</span>. Assista ao vivo o que der, dá até para ouvir no fone enquanto ele brinca, e reveja o resto à noite, no seu tempo.</p></details><details><summary>E se não servir para o meu filho?</summary><p>Você tem 7 dias de garantia. Se não fizer sentido para ele, devolvemos 100% do valor.</p></details><details><summary>Meu filho não tem laudo, ou está na fila do médico. Serve?</summary><p>Serve. Você não precisa de laudo para entender em que ponto da leitura ele está e qual é o próximo passo. O workshop não diagnostica nem substitui o médico, mas você não precisa esperar a consulta para ajudar em casa.</p></details><details><summary>Serve para a idade do meu filho?</summary><p>O workshop é sobre o processo de alfabetização, não sobre uma idade. O ponto de partida é o que ele já sabe, seja aos 6 ou aos 10 anos.</p></details><details><summary>Não sou professora. Vou entender?</summary><p>Vai. A Taline explica sem termos técnicos e com exemplos de crianças reais. Famílias e profissionais assistem juntos.</p></details><details><summary>É método fônico? A escola usa outro método.</summary><p>O objetivo não é defender um método por ideologia. É descobrir o que ajuda esta criança a avançar. O som das letras e os recursos de ver, tocar e falar entram como ferramentas, escolhidas a partir da resposta dela.</p></details><details><summary>A criança tem uma necessidade específica. Serve?</summary><p>O workshop foi pensado para crianças que aprendem de formas diferentes. Ele não substitui acompanhamento de especialista; ele te ajuda a entender o processo e a conversar melhor com a escola e com quem acompanha a criança.</p></details><details><summary>Como recebo o acesso?</summary><p>Logo depois do pagamento, pelo e-mail e WhatsApp cadastrados na compra.</p></details></div></section>
+
+<section class="fechamento"><div class="wrap estreito">
+  <h2>Você não está fazendo errado. Você está fazendo sozinha.</h2><p>Você não precisa saber tudo. Precisa saber qual é o próximo passo. Neste sábado, você aprende a enxergar o que o seu filho já sabe, e a hora da lição pode deixar de ser hora de choro.</p>
+<p>Sábado, 14 de novembro, às 9h. Ao vivo, com gravação e 7 dias de garantia.</p>
+  <a class="cta" href="#LINK-GREENN" data-cta>Quero minha vaga no workshop</a>
+  <p class="chip-lote" data-lote-chip></p>
+</div></section>
+<footer><div class="wrap">Workshop Alfabetização com Intenção · Professora Taline Nogueira · A+ Assessoria Educacional</div></footer>
+<div class="barra-fixa"><span data-lote-barra></span><a class="cta-barra" href="#LINK-GREENN" data-cta>Garantir vaga</a></div>
+<script>
+(function(){
+  var D={"lotes": [{"nome": "1º lote", "valor": "R$ 67", "prazo": "até 5/11", "ate": "2026-11-05"}, {"nome": "2º lote", "valor": "R$ 87", "prazo": "6 a 10/11", "ate": "2026-11-10"}, {"nome": "3º lote", "valor": "R$ 97", "prazo": "11 a 14/11", "ate": "2026-11-14"}], "variantes": {"tempo": {"gancho": "Cada criança aprende no seu tempo. O que ela precisa é do próximo passo certo."}, "ler": {"gancho": "\"Será que um dia ele vai ler?\" O que falta pode ser o caminho, não a capacidade."}, "esquece": {"gancho": "Hoje ele faz. Amanhã parece que esqueceu."}, "capacidade": {"gancho": "Quando uma criança não aprende, quase nunca é falta de capacidade."}, "porondecomecar": {"gancho": "Quando a criança ainda não lê, por onde começar?"}}};
+  // Lote do dia: o primeiro cuja data final ainda não passou.
+  var hoje=new Date(); hoje.setHours(0,0,0,0);
+  var atual=D.lotes.find(function(l){return new Date(l.ate+'T23:59:59')>=hoje;})||D.lotes[D.lotes.length-1];
+  var idx=D.lotes.indexOf(atual), prox=D.lotes[idx+1];
+  document.querySelectorAll('.lote').forEach(function(el,i){el.classList.toggle('ativo',i===idx);el.classList.toggle('passou',i<idx);});
+  var fim=atual.prazo.replace(/^.*?(\d+\/\d+)$/,'$1');
+  var chip=atual.nome+': '+atual.valor+' até '+fim+(prox?' · depois '+prox.valor:'');
+  document.querySelectorAll('[data-lote-chip]').forEach(function(e){e.textContent=chip;});
+  document.querySelectorAll('[data-lote-barra]').forEach(function(e){e.innerHTML='<b>'+atual.valor+'</b> · '+atual.nome+' até '+fim;});
+  // Topo da página conforme o anúncio (utm_content contém a chave do ângulo).
+  var uc=(new URLSearchParams(location.search).get('utm_content')||'').toLowerCase();
+  Object.keys(D.variantes).forEach(function(k){
+    if(uc.indexOf(k)>=0){var v=D.variantes[k];
+      document.querySelector('[data-hero-gancho]').innerHTML=v.gancho;}
+  });
+  // UTMs até o checkout e InitiateCheckout no clique.
+  var q=location.search.replace(/^\?/,'');
+  document.querySelectorAll('[data-cta]').forEach(function(a){
+    if(q&&a.href.indexOf('http')===0){a.href+=(a.href.indexOf('?')<0?'?':'&')+q;}
+    a.addEventListener('click',function(){if(window.fbq)fbq('track','InitiateCheckout');});
+  });
+  var barra=document.querySelector('.barra-fixa'),hero=document.querySelector('.hero');
+  if(barra&&hero&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(e){barra.classList.toggle('on',!e[0].isIntersecting);}).observe(hero);
+  }
+})();
+</script>
+</body>
+</html>
