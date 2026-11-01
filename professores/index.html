@@ -163,6 +163,23 @@ section{padding:72px 0}
 .foto-taline img{max-height:620px;width:100%;object-fit:cover;object-position:50% 20%;border-radius:22px}
 .barra-fixa{display:none}
 
+
+/* caminho confuso × claro */
+.contraste h2{margin-bottom:28px}
+.contraste .lado{margin:0;padding:22px 18px}
+.svg-caminho{width:100%;height:auto;display:block;margin:6px 0 10px}
+.contraste figcaption{font-size:15px;color:var(--suave);text-align:center}
+.linha-ruim{fill:none;stroke:#C98B6E;stroke-width:4;stroke-dasharray:2 10;stroke-linecap:round}
+.chip-ruim{fill:#fff;stroke:#E8C3B1;stroke-width:2}
+.txt-ruim{font:600 19px Inter;fill:#7A4A33;text-anchor:middle}
+.duvida{font:700 40px Fraunces,serif;fill:#D7A78F}
+.fim-ruim{font:700 26px Fraunces,serif;fill:var(--terra-esc);text-anchor:end}
+.linha-bom{fill:none;stroke:var(--verde);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.no-bom{fill:var(--verde);stroke:#fff;stroke-width:4}
+.num-bom{font:700 18px Inter;fill:#fff;text-anchor:middle}
+.txt-bom{font:700 21px Inter;fill:var(--verde)}
+.fim-bom{font:700 28px Fraunces,serif;fill:var(--terra);text-anchor:middle}
+
 /* preço */
 .preco{background:linear-gradient(180deg,var(--creme),var(--papel));text-align:center}
 .preco .lead{margin:0 auto 28px}
@@ -259,9 +276,12 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
 </div></section>
 
 <section class="contraste"><div class="wrap">
+  <h2 class="centro">O caminho que confunde × o caminho claro</h2>
   <div class="duas">
-    <div class="lado ruim"><p class="rotulo">Como costuma ser</p><ol class="fila ruim"><li>Atividade pronta</li><li>Adaptar no escuro</li><li>"Não acompanha"</li></ol></div>
-    <div class="lado bom"><p class="rotulo">Como pode ser</p><ol class="fila bom"><li>Observar</li><li>Avaliar</li><li>Decidir o próximo passo</li><li>Mediar</li><li>Registrar o avanço</li></ol></div>
+    <figure class="lado ruim"><p class="rotulo">Sem caminho claro</p><svg viewBox="0 0 600 440" class="svg-caminho" role="img" aria-label="Caminho sem direção"><path d="M110 70 C 300 -10, 520 60, 440 95 S 60 150, 180 205 S 560 190, 470 250 S 20 260, 120 330 S 330 420, 390 345 S 560 300, 520 395" class="linha-ruim"/><text x="300" y="150" class="duvida">?</text><text x="60" y="260" class="duvida">?</text><text x="540" y="170" class="duvida">?</text><text x="270" y="300" class="duvida">?</text><rect x="-1" y="48" width="222" height="44" rx="22" class="chip-ruim"/><text x="110" y="77" class="txt-ruim">Atividade pronta</text><rect x="379" y="73" width="122" height="44" rx="22" class="chip-ruim"/><text x="440" y="102" class="txt-ruim">Apostila</text><rect x="82" y="183" width="197" height="44" rx="22" class="chip-ruim"/><text x="180" y="212" class="txt-ruim">Folha reduzida</text><rect x="390" y="228" width="160" height="44" rx="22" class="chip-ruim"/><text x="470" y="257" class="txt-ruim">Letra maior</text><rect x="46" y="308" width="147" height="44" rx="22" class="chip-ruim"/><text x="120" y="337" class="txt-ruim">Mais tempo</text><rect x="335" y="323" width="110" height="44" rx="22" class="chip-ruim"/><text x="390" y="352" class="txt-ruim">Repetir</text><text x="520" y="430" class="fim-ruim">E agora?</text></svg>
+      <figcaption>Adaptar no escuro: muita atividade, pouco avanço e "não acompanha" no relatório.</figcaption></figure>
+    <figure class="lado bom"><p class="rotulo">Com caminho claro</p><svg viewBox="0 0 600 440" class="svg-caminho" role="img" aria-label="Caminho claro, passo a passo"><path d="M 140 380 L 212 312 L 285 245 L 358 178 L 430 110" class="linha-bom"/><circle cx="140" cy="380" r="20" class="no-bom"/><text x="140" y="387" class="num-bom">1</text><text x="170" y="414" class="txt-bom" text-anchor="start">Observar</text><circle cx="212" cy="312" r="20" class="no-bom"/><text x="212" y="320" class="num-bom">2</text><text x="182" y="294" class="txt-bom" text-anchor="end">Avaliar</text><circle cx="285" cy="245" r="20" class="no-bom"/><text x="285" y="252" class="num-bom">3</text><text x="315" y="279" class="txt-bom" text-anchor="start">Próximo passo</text><circle cx="358" cy="178" r="20" class="no-bom"/><text x="358" y="184" class="num-bom">4</text><text x="328" y="160" class="txt-bom" text-anchor="end">Mediar</text><circle cx="430" cy="110" r="20" class="no-bom"/><text x="430" y="117" class="num-bom">5</text><text x="460" y="144" class="txt-bom" text-anchor="start">Registrar</text><text x="430" y="36" class="fim-bom">Avançou ✓</text></svg>
+      <figcaption>Cada passo parte do que a criança já sabe.</figcaption></figure>
   </div>
 </div></section>
 
