@@ -44,7 +44,7 @@ section{padding:72px 0}
 .hero{padding:40px 0 64px;background:linear-gradient(180deg,var(--papel),var(--creme))}
 .hero-grid{display:grid;gap:36px;align-items:center}
 .hero .sub{font-size:20px;color:var(--suave);margin-top:20px;max-width:560px}
-.hero-foto img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 60px -30px rgba(43,38,34,.45)}
+.hero-foto img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%;width:100%;box-shadow:0 30px 60px -30px rgba(43,38,34,.45)}
 
 /* dor */
 .duas{display:grid;gap:40px;align-items:center}
@@ -189,8 +189,13 @@ details p{margin-top:12px;color:var(--suave)}
 footer{padding:28px 0 100px;font-size:13px;color:var(--suave);text-align:center}
 
 @media (min-width:860px){
-  .hero{padding:72px 0 88px}
-  .hero-grid{grid-template-columns:1.15fr .85fr}
+  .hero{padding:40px 0 64px}
+  .hero-grid{grid-template-columns:1.45fr .75fr;align-items:start;gap:48px}
+  .hero h1{font-size:clamp(34px,3.3vw,46px)}
+  .hero .sub{font-size:18px;margin-top:14px}
+  .hero .cta{margin-top:20px}
+  .hero-foto{align-self:start}
+  .hero-foto img{aspect-ratio:4/5;max-height:calc(100vh - 140px);object-position:50% 15%}
   .duas{grid-template-columns:1fr 1fr}
   .ciclo{grid-template-columns:1fr 1fr}
   .cards4{grid-template-columns:repeat(4,1fr)}
@@ -233,7 +238,7 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
       <a class="cta" href="#vagas">Quero minha vaga com certificado</a>
       <p class="chip-lote" data-lote-chip></p>
     </div>
-    <figure class="hero-foto"><img src="img/taline-aluna.jpg" alt="Professora Taline Nogueira em sala de aula"></figure>
+    <figure class="hero-foto"><img src="img/taline-pro-4.jpg" alt="Professora Taline Nogueira em sala de aula"></figure>
   </div>
 </header>
 
