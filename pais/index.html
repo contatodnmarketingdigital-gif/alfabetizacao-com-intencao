@@ -216,7 +216,7 @@ section{padding:72px 0}
 .preco .lead{margin:0 auto 28px}
 .caixa-preco{background:#fff;border-radius:24px;padding:34px 22px;box-shadow:0 30px 60px -36px rgba(43,38,34,.5);border:2px solid var(--terra)}
 .evento{font-weight:600;color:var(--verde);margin-bottom:20px}
-.lotes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.lotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
 .lote{border:1px solid var(--linha);border-radius:14px;padding:16px 10px;display:flex;flex-direction:column;opacity:.55}
 .lote.ativo{opacity:1;border:2px solid var(--terra);background:#FFF8F2}
 .lote-nome{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--suave)}
@@ -377,7 +377,7 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
 
 <section class="decidir"><div class="wrap estreito">
   <h2>Antes de você decidir</h2><p class="ponte">Se você chegou até aqui e se reconheceu, faltam só algumas respostas práticas:</p>
-  <ul><li><strong>Não pode ficar o sábado inteiro?</strong> Assista ao vivo o que der e reveja o resto na gravação, disponível por 30 dias.</li><li><strong>Não é professora?</strong> Não precisa. A Taline explica sem termos difíceis, com exemplos de crianças reais.</li><li><strong>E se não servir para o seu filho?</strong> Você tem 7 dias de garantia.</li><li><strong>Preço:</strong> R$ 67 até 05/11. Sobe para R$ 87 no dia 6 e para R$ 97 no dia 11. Pix ou cartão.</li></ul>
+  <ul><li><strong>Não pode ficar o sábado inteiro?</strong> Assista ao vivo o que der e reveja o resto na gravação, disponível por 30 dias.</li><li><strong>Não é professora?</strong> Não precisa. A Taline explica sem termos difíceis, com exemplos de crianças reais.</li><li><strong>E se não servir para o seu filho?</strong> Você tem 7 dias de garantia.</li><li><strong>Preço:</strong> R$ 67 no Pix ou em até 12x de R$ 6,89 no cartão.</li></ul>
 </div></section>
 
 <section class="preco" id="vagas"><div class="wrap estreito">
@@ -385,8 +385,8 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
   <p class="lead">Por R$ 67, o preço de uma apostila. A diferença é que, depois deste sábado, você sabe qual atividade faz sentido para ele agora, e qual não faz.</p>
   <div class="caixa-preco">
     <p class="evento">Sábado, 14 de novembro · ao vivo e online · 9h às 12h e 13h às 16h</p>
-    <div class="lotes"><div class="lote" data-ate="2026-11-05"><span class="lote-nome">1º lote</span><span class="lote-valor">R$ 67</span><span class="lote-prazo">até 5/11</span></div><div class="lote" data-ate="2026-11-10"><span class="lote-nome">2º lote</span><span class="lote-valor">R$ 87</span><span class="lote-prazo">6 a 10/11</span></div><div class="lote" data-ate="2026-11-14"><span class="lote-nome">3º lote</span><span class="lote-valor">R$ 97</span><span class="lote-prazo">11 a 14/11</span></div></div>
-    <p class="parcela">Pix ou cartão em até 12x · o preço sobe a cada lote</p>
+    <div class="lotes"><div class="lote" data-ate="2026-11-14"><span class="lote-nome">Investimento</span><span class="lote-valor">R$ 67</span><span class="lote-prazo">ou 12x de R$ 6,89 no cartão</span></div></div>
+    <p class="parcela">Pix ou cartão em até 12x</p>
     <a class="cta" href="https://payfast.greenn.com.br/jdq9qhd" data-cta>Garantir minha vaga</a>
     <div class="garantia"><span class="selo">7</span><p><strong>Garantia de 7 dias.</strong> Participe do workshop. Se achar que não valeu o seu sábado, peça o reembolso pela Greenn e devolvemos 100% do valor. Sem formulário, sem justificativa.</p></div>
     <p class="mini">Pagamento seguro · Pix ou cartão · acesso enviado no e-mail e WhatsApp</p>
@@ -405,16 +405,16 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
 <div class="barra-fixa"><span data-lote-barra></span><a class="cta-barra" href="#vagas">Garantir vaga</a></div>
 <script>
 (function(){
-  var D={"lotes": [{"nome": "1º lote", "valor": "R$ 67", "prazo": "até 5/11", "ate": "2026-11-05"}, {"nome": "2º lote", "valor": "R$ 87", "prazo": "6 a 10/11", "ate": "2026-11-10"}, {"nome": "3º lote", "valor": "R$ 97", "prazo": "11 a 14/11", "ate": "2026-11-14"}], "variantes": {"tempo": {"gancho": "Cada criança aprende no seu tempo. O que ela precisa é do próximo passo certo."}, "ler": {"gancho": "\"Será que um dia ele vai ler?\" O que falta pode ser o caminho, não a capacidade."}, "esquece": {"gancho": "Hoje ele faz. Amanhã parece que esqueceu."}, "capacidade": {"gancho": "Quando uma criança não aprende, quase nunca é falta de capacidade."}, "porondecomecar": {"gancho": "Quando a criança ainda não lê, por onde começar?"}}};
+  var D={"lotes": [{"nome": "Investimento", "valor": "R$ 67", "prazo": "ou 12x de R$ 6,89 no cartão", "ate": "2026-11-14", "chip": "Investimento: R$ 67 à vista ou 12x de R$ 6,89", "barra": "<b>R$ 67</b> · ou 12x de R$ 6,89"}], "variantes": {"tempo": {"gancho": "Cada criança aprende no seu tempo. O que ela precisa é do próximo passo certo."}, "ler": {"gancho": "\"Será que um dia ele vai ler?\" O que falta pode ser o caminho, não a capacidade."}, "esquece": {"gancho": "Hoje ele faz. Amanhã parece que esqueceu."}, "capacidade": {"gancho": "Quando uma criança não aprende, quase nunca é falta de capacidade."}, "porondecomecar": {"gancho": "Quando a criança ainda não lê, por onde começar?"}}};
   // Lote do dia: o primeiro cuja data final ainda não passou.
   var hoje=new Date(); hoje.setHours(0,0,0,0);
   var atual=D.lotes.find(function(l){return new Date(l.ate+'T23:59:59')>=hoje;})||D.lotes[D.lotes.length-1];
   var idx=D.lotes.indexOf(atual), prox=D.lotes[idx+1];
   document.querySelectorAll('.lote').forEach(function(el,i){el.classList.toggle('ativo',i===idx);el.classList.toggle('passou',i<idx);});
   var fim=atual.prazo.replace(/^.*?(\d+\/\d+)$/,'$1');
-  var chip=atual.nome+': '+atual.valor+' até '+fim+(prox?' · depois '+prox.valor:'');
+  var chip=atual.chip||(atual.nome+': '+atual.valor+' até '+fim+(prox?' · depois '+prox.valor:''));
   document.querySelectorAll('[data-lote-chip]').forEach(function(e){e.textContent=chip;});
-  document.querySelectorAll('[data-lote-barra]').forEach(function(e){e.innerHTML='<b>'+atual.valor+'</b> · '+atual.nome+' até '+fim;});
+  document.querySelectorAll('[data-lote-barra]').forEach(function(e){e.innerHTML=atual.barra||('<b>'+atual.valor+'</b> · '+atual.nome+' até '+fim);});
   // Topo da página conforme o anúncio (utm_content contém a chave do ângulo).
   var uc=(new URLSearchParams(location.search).get('utm_content')||'').toLowerCase();
   Object.keys(D.variantes).forEach(function(k){
