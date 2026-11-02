@@ -188,6 +188,29 @@ section{padding:72px 0}
 .tarja-vivo .ponto{flex:0 0 10px;height:10px;border-radius:50%;background:#fff;animation:pulsa 1.4s ease-in-out infinite}
 @keyframes pulsa{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
 
+/* ponte entre seções */
+.ponte{font:italic 500 20px/1.45 Fraunces,serif;color:var(--terra-esc);max-width:680px;margin:-6px auto 28px;text-align:center}
+.decidir .ponte,.programa .ponte{margin-left:0;text-align:left}
+
+/* entregas tangíveis */
+.oferta .entregas{display:grid;gap:18px;margin-top:8px}
+.entrega{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;background:var(--creme);border:1px solid var(--linha);border-radius:18px;padding:18px}
+.folha{background:#fff;border-radius:6px;box-shadow:0 10px 22px -12px rgba(43,38,34,.45);padding:12px 10px;aspect-ratio:3/4;transform:rotate(-3deg);display:flex;flex-direction:column;gap:7px}
+.folha b{font:700 10px/1.2 Inter,sans-serif;color:var(--verde);margin-bottom:4px}
+.folha .l{display:block;height:5px;border-radius:3px;background:#E8DFD0}
+.folha .l:nth-of-type(2n){width:75%}
+.folha .caixas{display:flex;gap:5px;margin-top:auto}
+.folha .caixas i{width:14px;height:14px;border:2px solid var(--terra);border-radius:3px}
+.folha .caixas i:first-child{background:var(--terra)}
+.entrega .pergunta{font:650 21px/1.25 Fraunces,serif;color:var(--tinta);margin-bottom:4px}
+.entrega .ficha-nome{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--terra-esc);margin-bottom:6px}
+.entrega-txt p+p{margin-top:0}
+.extras-tit{margin-top:30px;font-weight:700;text-align:center}
+.extras{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:12px}
+.extras li{background:var(--verde-cl);color:var(--verde);border-radius:999px;padding:9px 15px;font-weight:700;font-size:15px}
+@media (min-width:860px){.oferta .entregas{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.entrega{grid-template-columns:86px 1fr;gap:14px;padding:14px}.entrega .pergunta{font-size:19px}}
+
 /* preço */
 .preco{background:linear-gradient(180deg,var(--creme),var(--papel));text-align:center}
 .preco .lead{margin:0 auto 28px}
@@ -333,22 +356,27 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
   <h2>Você não precisa ser professora</h2><p>Você precisa aprender a ajudar do jeito certo. A Taline explica sem termos difíceis, com exemplos de crianças reais.</p>
 </div></section>
 
-<section class="oferta"><div class="wrap estreito">
-  <h2>Você não vai receber apenas mais uma pasta de atividades.</h2><ul class="chips"><li>Por que fazer</li><li>O que observar</li><li>Como ajudar</li><li>Quando repetir</li><li>Como saber se aprendeu</li><li>Quando avançar</li></ul>
-  <ul class="kit"><li>Um sábado de aula ao vivo com a professora Taline — você entende o processo, não só a atividade.</li><li>Gravação por 30 dias para rever com calma — assista o que der ao vivo e o resto à noite.</li><li>Ficha de Avaliação Inicial — para descobrir, em casa, em que ponto ele está.</li><li>Mapa do Próximo Passo — para decidir o que trabalhar a seguir, sem chutar.</li><li>As fichas de acompanhamento e a apostila da Taline — para registrar o que ele já firmou.</li><li>Perguntas ao vivo — leve a situação do seu filho.</li></ul>
+<section class="oferta"><div class="wrap">
+  <h2 class="centro">Você não vai receber apenas mais uma pasta de atividades.</h2>
+  <p class="ponte">Você sai do sábado com um caminho no papel. São três respostas que hoje faltam:</p>
+  <div class="entregas"><article class="entrega"><div class="folha" aria-hidden="true"><b>Ficha de Avaliação Inicial</b><i class="l"></i><i class="l"></i><i class="l"></i><i class="l"></i><span class="caixas"><i></i><i></i><i></i></span></div><div class="entrega-txt"><p class="pergunta">1. Em que ponto ele está?</p><p class="ficha-nome">Ficha de Avaliação Inicial</p><p>Você preenche em casa e enxerga o que ele já sabe de letras, sons, sílabas, leitura e escrita.</p></div></article><article class="entrega"><div class="folha" aria-hidden="true"><b>Mapa do Próximo Passo</b><i class="l"></i><i class="l"></i><i class="l"></i><i class="l"></i><span class="caixas"><i></i><i></i><i></i></span></div><div class="entrega-txt"><p class="pergunta">2. O que eu faço agora?</p><p class="ficha-nome">Mapa do Próximo Passo</p><p>Mostra o próximo passo e que tipo de ajuda dar, sem trocar de atividade no escuro.</p></div></article><article class="entrega"><div class="folha" aria-hidden="true"><b>Fichas de acompanhamento + apostila da Taline</b><i class="l"></i><i class="l"></i><i class="l"></i><i class="l"></i><span class="caixas"><i></i><i></i><i></i></span></div><div class="entrega-txt"><p class="pergunta">3. Ele aprendeu mesmo?</p><p class="ficha-nome">Fichas de acompanhamento + apostila da Taline</p><p>Você registra o que ele já firmou e sabe a hora de voltar uma etapa ou de avançar.</p></div></article></div>
+  <p class="extras-tit">E ainda:</p><ul class="extras"><li>Aula ao vivo de 6 horas</li><li>Gravação por 30 dias</li><li>Perguntas ao vivo sobre o seu filho</li></ul>
 </div></section>
 
 <section class="programa"><div class="wrap">
-  <h2>O que você vai aprender no sábado</h2><div class="duas"><div class="encontro"><h3>Manhã · Entender para ensinar</h3><ul><li>Por que mais atividade nem sempre ajuda, e o que olhar antes de escolher a próxima.</li><li>Por que ele faz hoje e esquece amanhã, explicado sem termos difíceis.</li><li>Como observar o que ele já sabe: letras, sons, sílabas, leitura e escrita.</li><li>Do que ele sabe ao próximo passo: o menor passo possível entre os dois.</li></ul></div><div class="encontro"><h3>Tarde · Ensinar para firmar</h3><ul><li>Diminuir a dificuldade sem diminuir o que ele pode aprender.</li><li>Ensinar pelos olhos, ouvidos e mãos, com propósito, não como enfeite.</li><li>Como saber se ele realmente aprendeu, ou só acertou com ajuda.</li><li>Quando é hora de voltar uma etapa, e quando é hora de avançar.</li><li>Perguntas ao vivo: traga a situação do seu filho.</li></ul></div></div>
+  <h2>O que você vai aprender no sábado</h2><p class="ponte">E é assim que o sábado vai acontecer, passo a passo:</p><div class="duas"><div class="encontro"><h3>Manhã · Entender para ensinar</h3><ul><li>Por que mais atividade nem sempre ajuda, e o que olhar antes de escolher a próxima.</li><li>Por que ele faz hoje e esquece amanhã, explicado sem termos difíceis.</li><li>Como observar o que ele já sabe: letras, sons, sílabas, leitura e escrita.</li><li>Do que ele sabe ao próximo passo: o menor passo possível entre os dois.</li></ul></div><div class="encontro"><h3>Tarde · Ensinar para firmar</h3><ul><li>Diminuir a dificuldade sem diminuir o que ele pode aprender.</li><li>Ensinar pelos olhos, ouvidos e mãos, com propósito, não como enfeite.</li><li>Como saber se ele realmente aprendeu, ou só acertou com ajuda.</li><li>Quando é hora de voltar uma etapa, e quando é hora de avançar.</li><li>Perguntas ao vivo: traga a situação do seu filho.</li></ul></div></div>
 </div></section>
 
-<section class="paraquem"><div class="wrap duas">
+<section class="paraquem"><div class="wrap">
+  <h2 class="centro">Esse workshop é para você?</h2><p class="ponte">Antes do valor, vale ser honesto: ele foi feito para um tipo de família, e não para todas.</p>
+  <div class="duas">
   <div class="sim"><h3>É para você se</h3><ul><li>Acompanha uma criança em alfabetização e quer entender o que está acontecendo.</li><li>Cansou de trocar de atividade sem saber se está ajudando.</li><li>A criança aprende num tempo diferente e você quer um caminho, não uma receita.</li></ul></div>
   <div class="nao"><h3>Não é para você se</h3><ul><li>Procura uma lista de atividades prontas para imprimir.</li><li>Espera uma promessa de que ele vai ler em X dias. Ninguém sério promete isso.</li><li>Procura algo para substituir a escola ou os profissionais que acompanham a criança.</li></ul></div>
+  </div>
 </div></section>
 
 <section class="decidir"><div class="wrap estreito">
-  <h2>Antes de você decidir</h2>
+  <h2>Antes de você decidir</h2><p class="ponte">Se você chegou até aqui e se reconheceu, faltam só algumas respostas práticas:</p>
   <ul><li><strong>Não pode ficar o sábado inteiro?</strong> Assista ao vivo o que der e reveja o resto na gravação, disponível por 30 dias.</li><li><strong>Não é professora?</strong> Não precisa. A Taline explica sem termos difíceis, com exemplos de crianças reais.</li><li><strong>E se não servir para o seu filho?</strong> Você tem 7 dias de garantia.</li><li><strong>Preço:</strong> R$ 67 até 05/11. Sobe para R$ 87 no dia 6 e para R$ 97 no dia 11. Pix ou cartão.</li></ul>
 </div></section>
 

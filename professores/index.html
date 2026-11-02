@@ -188,6 +188,29 @@ section{padding:72px 0}
 .tarja-vivo .ponto{flex:0 0 10px;height:10px;border-radius:50%;background:#fff;animation:pulsa 1.4s ease-in-out infinite}
 @keyframes pulsa{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
 
+/* ponte entre seções */
+.ponte{font:italic 500 20px/1.45 Fraunces,serif;color:var(--terra-esc);max-width:680px;margin:-6px auto 28px;text-align:center}
+.decidir .ponte,.programa .ponte{margin-left:0;text-align:left}
+
+/* entregas tangíveis */
+.oferta .entregas{display:grid;gap:18px;margin-top:8px}
+.entrega{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;background:var(--creme);border:1px solid var(--linha);border-radius:18px;padding:18px}
+.folha{background:#fff;border-radius:6px;box-shadow:0 10px 22px -12px rgba(43,38,34,.45);padding:12px 10px;aspect-ratio:3/4;transform:rotate(-3deg);display:flex;flex-direction:column;gap:7px}
+.folha b{font:700 10px/1.2 Inter,sans-serif;color:var(--verde);margin-bottom:4px}
+.folha .l{display:block;height:5px;border-radius:3px;background:#E8DFD0}
+.folha .l:nth-of-type(2n){width:75%}
+.folha .caixas{display:flex;gap:5px;margin-top:auto}
+.folha .caixas i{width:14px;height:14px;border:2px solid var(--terra);border-radius:3px}
+.folha .caixas i:first-child{background:var(--terra)}
+.entrega .pergunta{font:650 21px/1.25 Fraunces,serif;color:var(--tinta);margin-bottom:4px}
+.entrega .ficha-nome{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--terra-esc);margin-bottom:6px}
+.entrega-txt p+p{margin-top:0}
+.extras-tit{margin-top:30px;font-weight:700;text-align:center}
+.extras{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:12px}
+.extras li{background:var(--verde-cl);color:var(--verde);border-radius:999px;padding:9px 15px;font-weight:700;font-size:15px}
+@media (min-width:860px){.oferta .entregas{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.entrega{grid-template-columns:86px 1fr;gap:14px;padding:14px}.entrega .pergunta{font-size:19px}}
+
 /* preço */
 .preco{background:linear-gradient(180deg,var(--creme),var(--papel));text-align:center}
 .preco .lead{margin:0 auto 28px}
@@ -336,23 +359,27 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
   <h2>Você não precisa de mais material. Precisa de critério.</h2><p>O ciclo funciona com a apostila que a sua escola já usa. O que muda é como você decide o que vem a seguir.</p>
 </div></section>
 
-<section class="oferta"><div class="wrap estreito">
-  <h2>Não é pasta de atividade. É o que você preenche com o seu aluno.</h2><p>Você sai do sábado com as fichas que a Taline usa na turma dela. A Ficha de Avaliação Inicial mostra o que ele já sabe. O Mapa do Próximo Passo diz o que trabalhar agora. A Ficha de Consolidação vira o texto do seu relatório: em vez de "não acompanha", você escreve o que ele já consolidou e qual é o próximo objetivo.</p>
-<p><span class="pendente">[PREENCHER: imagens da Ficha de Avaliação Inicial e do Mapa do Próximo Passo preenchidos, com nome omitido]</span></p>
-  <ul class="kit"><li>6 horas ao vivo + gravação por 30 dias</li><li>Certificado de 6 horas <span class="pendente">[CONFIRMAR emissor]</span></li><li>Apostila teórica completa</li><li>Ficha de Avaliação Inicial</li><li>Mapa do Próximo Passo</li><li>Ficha de Planejamento Intencional</li><li>Ficha de Registro de Mediação</li><li>Ficha de Consolidação e Ficha de Reavaliação — para o relatório descritivo, o PEI e o conselho de classe</li><li>Modelo de Plano de Intervenção e Estudo de Caso</li><li>Checklist para analisar uma apostila</li></ul>
+<section class="oferta"><div class="wrap">
+  <h2 class="centro">Não é pasta de atividade. É o que você preenche com o seu aluno.</h2>
+  <p class="ponte">Você sai do sábado com as fichas que a Taline usa na turma dela. Cada uma responde a uma pergunta da sua semana:</p>
+  <div class="entregas"><article class="entrega"><div class="folha" aria-hidden="true"><b>Ficha de Avaliação Inicial</b><i class="l"></i><i class="l"></i><i class="l"></i><i class="l"></i><span class="caixas"><i></i><i></i><i></i></span></div><div class="entrega-txt"><p class="pergunta">1. Onde cada aluno está?</p><p class="ficha-nome">Ficha de Avaliação Inicial</p><p>Mostra o que ele já consolidou e o que ainda não, além da hipótese da sondagem.</p></div></article><article class="entrega"><div class="folha" aria-hidden="true"><b>Mapa do Próximo Passo + Planejamento Intencional</b><i class="l"></i><i class="l"></i><i class="l"></i><i class="l"></i><span class="caixas"><i></i><i></i><i></i></span></div><div class="entrega-txt"><p class="pergunta">2. O que eu faço na segunda-feira?</p><p class="ficha-nome">Mapa do Próximo Passo + Planejamento Intencional</p><p>O menor passo possível, o objetivo e a estratégia de cada aluno.</p></div></article><article class="entrega"><div class="folha" aria-hidden="true"><b>Ficha de Registro de Mediação</b><i class="l"></i><i class="l"></i><i class="l"></i><i class="l"></i><span class="caixas"><i></i><i></i><i></i></span></div><div class="entrega-txt"><p class="pergunta">3. Que ajuda ele precisa?</p><p class="ficha-nome">Ficha de Registro de Mediação</p><p>Você registra a ajuda dada e vai retirando conforme ele ganha autonomia.</p></div></article><article class="entrega"><div class="folha" aria-hidden="true"><b>Fichas de Consolidação e de Reavaliação</b><i class="l"></i><i class="l"></i><i class="l"></i><i class="l"></i><span class="caixas"><i></i><i></i><i></i></span></div><div class="entrega-txt"><p class="pergunta">4. Como eu mostro o avanço?</p><p class="ficha-nome">Fichas de Consolidação e de Reavaliação</p><p>Viram o texto do relatório, do PEI e do conselho de classe: no lugar de "não acompanha", o que ele já consolidou.</p></div></article></div>
+  <p class="extras-tit">E ainda:</p><ul class="extras"><li>6 horas ao vivo</li><li>Gravação por 30 dias</li><li>Certificado de 6 horas <span class="pendente">[CONFIRMAR emissor]</span></li><li>Apostila teórica</li><li>Plano de Intervenção e Estudo de Caso</li><li>Checklist para analisar apostila</li></ul>
 </div></section>
 
 <section class="programa"><div class="wrap">
-  <h2>Programação</h2><div class="duas"><div class="encontro"><h3>Encontro 1 · Entender para ensinar · 9h às 12h</h3><ul><li>O professor não começa pela atividade (20 min)</li><li>Por que ele faz hoje e esquece amanhã: o que Piaget, Vygotsky, Dehaene e Capovilla dizem sobre isso (60 min)</li><li>O primeiro passo não é ensinar, é avaliar (35 min)</li><li>Do diagnóstico ao próximo passo (35 min)</li><li>Miniaplicação: o Mapa do Próximo Passo com um aluno real (15 min)</li></ul></div><div class="encontro"><h3>Encontro 2 · Ensinar para consolidar · 13h às 16h</h3><ul><li>Não é ensinar mais, é reduzir a complexidade (20 min)</li><li>Estratégias multissensoriais com propósito (25 min)</li><li>Consciência fonológica e princípio alfabético (25 min)</li><li>Estudo de caso: do ponto de partida à consolidação (35 min)</li><li>Quando eu posso avançar: aquisição, consolidação, consolidado (15 min)</li><li>A apostila é recurso, não planejador (15 min)</li><li>Avaliar para replanejar (15 min)</li><li>Casos, perguntas e plano de ação (20 min)</li></ul></div></div>
+  <h2>Programação</h2><p class="ponte">Para você sair com essas fichas preenchidas, o sábado é organizado assim:</p><div class="duas"><div class="encontro"><h3>Encontro 1 · Entender para ensinar · 9h às 12h</h3><ul><li>O professor não começa pela atividade (20 min)</li><li>Por que ele faz hoje e esquece amanhã: o que Piaget, Vygotsky, Dehaene e Capovilla dizem sobre isso (60 min)</li><li>O primeiro passo não é ensinar, é avaliar (35 min)</li><li>Do diagnóstico ao próximo passo (35 min)</li><li>Miniaplicação: o Mapa do Próximo Passo com um aluno real (15 min)</li></ul></div><div class="encontro"><h3>Encontro 2 · Ensinar para consolidar · 13h às 16h</h3><ul><li>Não é ensinar mais, é reduzir a complexidade (20 min)</li><li>Estratégias multissensoriais com propósito (25 min)</li><li>Consciência fonológica e princípio alfabético (25 min)</li><li>Estudo de caso: do ponto de partida à consolidação (35 min)</li><li>Quando eu posso avançar: aquisição, consolidação, consolidado (15 min)</li><li>A apostila é recurso, não planejador (15 min)</li><li>Avaliar para replanejar (15 min)</li><li>Casos, perguntas e plano de ação (20 min)</li></ul></div></div>
 </div></section>
 
-<section class="paraquem"><div class="wrap duas">
+<section class="paraquem"><div class="wrap">
+  <h2 class="centro">Esse workshop é para você?</h2><p class="ponte">Ele não serve para todo mundo, e é melhor você saber agora:</p>
+  <div class="duas">
   <div class="sim"><h3>É para você se</h3><ul><li>Alfabetiza ou acompanha crianças com diferentes necessidades de aprendizagem.</li><li>Atua em sala regular, AEE, sala de recursos, reforço, psicopedagogia ou mediação.</li><li>Quer critério para decidir, não mais uma lista de atividades.</li></ul></div>
   <div class="nao"><h3>Não é para você se</h3><ul><li>Procura um método fechado para aplicar igual em todos.</li></ul></div>
+  </div>
 </div></section>
 
 <section class="decidir"><div class="wrap estreito">
-  <h2>Antes de você decidir</h2>
+  <h2>Antes de você decidir</h2><p class="ponte">Se você se reconheceu, estas são as respostas práticas que costumam faltar:</p>
   <ul><li><strong>Não pode o sábado inteiro?</strong> Assista ao vivo o que der e reveja o resto na gravação, disponível por 30 dias.</li><li><strong>Certificado:</strong> 6 horas, curso livre de formação continuada, emitido por <span class="pendente">[CONFIRMAR emissor]</span>.</li><li><strong>A sala tem famílias?</strong> Tem. O conteúdo é o mesmo porque a criança é a mesma. Os estudos de caso são de sala de aula.</li><li><strong>Preço:</strong> R$ 67 até 05/11. Sobe para R$ 87 no dia 6 e para R$ 97 no dia 11. Pix ou cartão.</li></ul>
 </div></section>
 
