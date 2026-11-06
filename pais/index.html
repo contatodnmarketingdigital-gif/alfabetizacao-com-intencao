@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <title>Alfabetização com Intenção · Workshop para famílias</title>
-<meta name="description" content="Ao vivo no dia 14/11, a professora Taline Nogueira mostra como descobrir o que a criança já sabe, o que ainda falta firmar e que ajuda dar em casa, inclusive para crianças com necessidades específicas de aprendizagem.">
+<meta name="description" content="Em um sábado ao vivo, a professora Taline Nogueira mostra como observar o que ele já sabe, o que ainda falta firmar e que ajuda dar em casa. É o mesmo caminho que ela usa na turma dela: 23 de 23 alunos terminaram o ano letivo lendo.">
 <meta property="og:title" content="Alfabetização com Intenção · Workshop para famílias">
-<meta property="og:description" content="Ao vivo no dia 14/11, a professora Taline Nogueira mostra como descobrir o que a criança já sabe, o que ainda falta firmar e que ajuda dar em casa, inclusive para crianças com necessidades específicas de aprendizagem.">
+<meta property="og:description" content="Em um sábado ao vivo, a professora Taline Nogueira mostra como observar o que ele já sabe, o que ainda falta firmar e que ajuda dar em casa. É o mesmo caminho que ela usa na turma dela: 23 de 23 alunos terminaram o ano letivo lendo.">
 <meta property="og:image" content="img/taline-turma.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -188,6 +188,14 @@ section{padding:72px 0}
 .tarja-vivo .ponto{flex:0 0 10px;height:10px;border-radius:50%;background:#fff;animation:pulsa 1.4s ease-in-out infinite}
 @keyframes pulsa{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
 
+/* primeira dobra v3 (06/11/2026): tema do anúncio + quem ensina + preço + botão ao checkout */
+.para-quem{display:inline-block;background:var(--verde);color:#fff;border-radius:10px;padding:8px 12px;
+  font:700 13px/1.35 Inter,sans-serif;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+.quem-ensina{display:flex;gap:14px;align-items:flex-start;margin-top:18px}
+.quem-ensina img{flex:0 0 58px;width:58px;height:58px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:3px solid #fff;box-shadow:0 6px 14px -8px rgba(43,38,34,.6)}
+.quem-ensina .sub{margin-top:0}
+.preco-topo{margin-top:12px;font-size:15px;font-weight:600;color:var(--verde)}
+
 /* ponte entre seções */
 .ponte{font:italic 500 20px/1.45 Fraunces,serif;color:var(--terra-esc);max-width:680px;margin:-6px auto 28px;text-align:center}
 .decidir .ponte,.programa .ponte{margin-left:0;text-align:left}
@@ -262,8 +270,14 @@ footer{padding:28px 0 100px;font-size:13px;color:var(--suave);text-align:center}
   .cta-barra{background:var(--terra);color:#fff;font-weight:700;padding:12px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
   .cartoes{grid-template-columns:1fr 1fr}
   .cta{display:block;text-align:center}
-  .hero{padding-top:28px}
+  .hero{padding-top:20px}
   .hero-foto img{aspect-ratio:4/3}
+  /* celular: a dobra inteira (tema, título, quem ensina, botão e preço) cabe em ~1,3 tela */
+  .hero h1{font-size:27px;line-height:1.18}
+  .hero .gancho{font-size:18px;margin-bottom:10px}
+  .hero .sub{font-size:16px;line-height:1.5}
+  .tarja-vivo{font-size:12px;padding:8px 13px;margin-bottom:12px}
+  .hero .cta{margin-top:18px}
 }
 </style>
 <!-- Microsoft Clarity -->
@@ -274,7 +288,7 @@ footer{padding:28px 0 100px;font-size:13px;color:var(--suave);text-align:center}
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "z73tobfr0g");
 </script>
-<!-- Meta Pixel: preencher pixel_id em config.json -->
+<!-- Meta Pixel -->
 <script>
 (function(){var id="2803151296693412";if(!id)return;
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -286,13 +300,13 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="hero-txt">
-      <p class="tarja-vivo"><span class="ponto"></span>Ao vivo e online · sábado, 14 de novembro, às 9h · com gravação</p>
-      <p class="gancho" data-hero-gancho>Você já tentou de tudo? Talvez o que falte não seja mais uma atividade.</p>
-      <p class="nome-ws">Workshop Alfabetização com Intenção</p>
-      <h1>Ajude seu filho a avançar na leitura sabendo exatamente qual é o próximo passo para ele.</h1>
-      <p class="sub">Ao vivo no dia 14/11, a professora Taline Nogueira mostra como descobrir o que a criança já sabe, o que ainda falta firmar e que ajuda dar em casa, inclusive para crianças com necessidades específicas de aprendizagem.</p>
-      <a class="cta" href="#vagas">Quero minha vaga no workshop</a>
-      <p class="chip-lote" data-lote-chip></p>
+      <p class="tarja-vivo"><span class="ponto"></span>Workshop ao vivo · sábado, 14/11, às 9h · com gravação</p>
+      <p class="para-quem">Para famílias de crianças com dificuldade para ler e escrever</p>
+      <p class="gancho" data-hero-gancho>Não falta atividade. Falta saber qual delas ele precisa agora.</p>
+      <h1>Descubra em que ponto da leitura seu filho está, e qual é o próximo passo para ele avançar.</h1>
+      <div class="quem-ensina"><img src="img/taline-pro-2.jpg" alt="Professora Taline Nogueira"><p class="sub">Em um sábado ao vivo, a professora Taline Nogueira mostra como observar o que ele já sabe, o que ainda falta firmar e que ajuda dar em casa. É o mesmo caminho que ela usa na turma dela: 23 de 23 alunos terminaram o ano letivo lendo.</p></div>
+      <a class="cta" href="https://payfast.greenn.com.br/jdq9qhd" data-cta data-pos="topo">Quero minha vaga</a>
+      <p class="preco-topo">R$ 67 ou 12x de R$ 6,89 · garantia de 7 dias</p>
     </div>
     <figure class="hero-foto"><img src="img/taline-aluna.jpg" alt="Professora Taline Nogueira em sala de aula"></figure>
   </div>
@@ -303,9 +317,9 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
   <ul class="cartoes"><li>Atividades da internet</li><li>Jogos</li><li>Apostilas</li><li>Vídeos</li><li>Tarefas da escola</li><li>Reforço e materiais diversos</li></ul>
   <div class="duas">
     <div>
-      <ul class="check"><li>Reconhece as letras, mas não junta para ler.</li><li>A hora da lição vira choro. Dele e, às vezes, seu. E depois vem a culpa.</li><li>A escola diz que ele "não acompanha", e ninguém diz o que fazer em casa.</li><li>Você está esperando a consulta que não chega, e o tempo passando.</li></ul>
+      <ul class="check"><li>Reconhece as letras, mas não junta para ler.</li><li>A hora da lição vira choro. Dele e, às vezes, seu. E depois vem a culpa.</li><li>A escola diz que ele "não acompanha", e ninguém diz o que fazer em casa.</li><li>Você está esperando alguém te dizer o que fazer, e o tempo passando.</li></ul>
       <blockquote class="citacao"><p>Hoje ele faz. Amanhã parece que esqueceu.</p><p>"Ele está aprendendo… mas eu não sei exatamente o quê."</p></blockquote></div>
-    <figure class="foto-papel"><img src="img/diagnostico.jpg" alt="Atividades de alfabetização"></figure>
+    <figure class="foto-papel"><img src="img/avaliacao.jpg" alt="Atividades de alfabetização"></figure>
   </div>
 </div></section>
 
@@ -335,7 +349,7 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
 <section class="prova"><div class="wrap">
   <h2>Quem já viu o ciclo funcionando</h2>
   <p class="lead">Este não é um método de livro. É a forma como a Taline trabalha na turma de 1º ano dela, numa escola municipal, com crianças que começaram de pontos muito diferentes.</p>
-  <div class="nums"><div class="num-card"><strong>23 de 23</strong><span>todos os alunos da turma leem, cada um no seu nível.</span></div><div class="num-card"><strong>19 de 23</strong><span>escrevem frases próprias, sem cópia.</span></div></div><p class="nota">Resultado da turma da Taline ao longo do ano letivo, com intervenção diária. O workshop ensina o raciocínio que ela usa; não promete prazo de leitura. <span class="pendente">[PREENCHER: 1 depoimento de mãe, de preferência de criança de 8 a 10 anos, com autorização]</span></p>
+  <div class="nums"><div class="num-card"><strong>23 de 23</strong><span>todos os alunos da turma leem, cada um no seu nível.</span></div><div class="num-card"><strong>19 de 23</strong><span>escrevem frases próprias, sem cópia.</span></div></div><p class="nota">Resultado da turma da Taline ao longo do ano letivo, com intervenção diária. O workshop ensina o raciocínio que ela usa; não promete prazo de leitura.</p>
   <div class="galeria"><img src="img/escrita-espontanea.jpg" alt="Produção de aluno da turma da professora Taline"><img src="img/producao-texto.jpg" alt="Produção de aluno da turma da professora Taline"><img src="img/materiais.jpg" alt="Produção de aluno da turma da professora Taline"></div>
 </div></section>
 
@@ -344,11 +358,11 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
   <div>
     <p class="eyebrow">Sua professora</p>
     <h2>Quem é a Taline Nogueira</h2>
-    <p>Professora, facilitadora e especialista em Neurociência e Educação, com atuação em alfabetização, aprendizagem e inclusão. Hoje alfabetiza uma turma de 1º ano numa escola municipal, com crianças que aprendem de jeitos muito diferentes.</p>
+    <p>Professora alfabetizadora, especialista em como a criança aprende a ler e escrever. Hoje alfabetiza uma turma de 1º ano numa escola municipal, com crianças que aprendem de jeitos muito diferentes.</p>
 <p>O que ela ensina no workshop é o que ela faz toda manhã: olhar para a criança antes de olhar para a atividade.</p>
-    <ul class="creds"><li>Especialista em Neurociência e Educação</li><li>Mestrado pela UniOrlando</li><li>3 anos na Educação Especial</li><li>7 anos acompanhando crianças em reforço escolar</li><li>Autora dos livros Alfabetização Fônica, Fluência Leitora e Gêneros Textuais</li><li>Atua no Instituto C&amp;T</li></ul>
+    <ul class="creds"><li>Pós-graduada em aprendizagem e educação</li><li>Mestrado pela UniOrlando</li><li>3 anos no atendimento individual a alunos que precisavam de mais apoio</li><li>7 anos acompanhando crianças em reforço escolar</li><li>Autora dos livros Alfabetização Fônica, Fluência Leitora e Gêneros Textuais</li><li>Atua no Instituto C&amp;T</li></ul>
     <figure class="livros"><img src="img/livros.jpg" alt="Livros da professora Taline Nogueira"><figcaption>Os livros da Taline, usados na turma dela</figcaption></figure>
-    <a class="cta" href="#vagas">Quero minha vaga no workshop</a>
+    <a class="cta" href="https://payfast.greenn.com.br/jdq9qhd" data-cta data-pos="meio">Quero minha vaga no workshop</a>
   </div>
 </div></section>
 
@@ -387,25 +401,25 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
     <p class="evento">Sábado, 14 de novembro · ao vivo e online · 9h às 12h e 13h às 16h</p>
     <div class="lotes"><div class="lote" data-ate="2026-11-14"><span class="lote-nome">Investimento</span><span class="lote-valor">R$ 67</span><span class="lote-prazo">ou 12x de R$ 6,89 no cartão</span></div></div>
     <p class="parcela">Pix ou cartão em até 12x</p>
-    <a class="cta" href="https://payfast.greenn.com.br/jdq9qhd" data-cta>Garantir minha vaga</a>
+    <a class="cta" href="https://payfast.greenn.com.br/jdq9qhd" data-cta data-pos="preco">Garantir minha vaga</a>
     <div class="garantia"><span class="selo">7</span><p><strong>Garantia de 7 dias.</strong> Participe do workshop. Se achar que não valeu o seu sábado, peça o reembolso pela Greenn e devolvemos 100% do valor. Sem formulário, sem justificativa.</p></div>
     <p class="mini">Pagamento seguro · Pix ou cartão · acesso enviado no e-mail e WhatsApp</p>
   </div>
 </div></section>
 
-<section class="faq"><div class="wrap estreito"><h2>Dúvidas</h2><details><summary>Não consigo ficar as 6 horas no sábado. E agora?</summary><p>Tudo bem. A aula fica gravada por 30 dias. Assista ao vivo o que der, dá até para ouvir no fone enquanto ele brinca, e reveja o resto à noite, no seu tempo.</p></details><details><summary>E se não servir para o meu filho?</summary><p>Você tem 7 dias de garantia. Se não fizer sentido para ele, devolvemos 100% do valor.</p></details><details><summary>Meu filho não tem laudo, ou está na fila do médico. Serve?</summary><p>Serve. Você não precisa de laudo para entender em que ponto da leitura ele está e qual é o próximo passo. O workshop não diagnostica nem substitui o médico, mas você não precisa esperar a consulta para ajudar em casa.</p></details><details><summary>Serve para a idade do meu filho?</summary><p>O workshop é sobre o processo de alfabetização, não sobre uma idade. O ponto de partida é o que ele já sabe, seja aos 6 ou aos 10 anos.</p></details><details><summary>Não sou professora. Vou entender?</summary><p>Vai. A Taline explica sem termos técnicos e com exemplos de crianças reais. Famílias e profissionais assistem juntos.</p></details><details><summary>É método fônico? A escola usa outro método.</summary><p>O objetivo não é defender um método por ideologia. É descobrir o que ajuda esta criança a avançar. O som das letras e os recursos de ver, tocar e falar entram como ferramentas, escolhidas a partir da resposta dela.</p></details><details><summary>A criança tem uma necessidade específica. Serve?</summary><p>O workshop foi pensado para crianças que aprendem de formas diferentes. Ele não substitui acompanhamento de especialista; ele te ajuda a entender o processo e a conversar melhor com a escola e com quem acompanha a criança.</p></details><details><summary>Como recebo o acesso?</summary><p>Logo depois do pagamento, pelo e-mail e WhatsApp cadastrados na compra.</p></details></div></section>
+<section class="faq"><div class="wrap estreito"><h2>Dúvidas</h2><details><summary>Não consigo ficar as 6 horas no sábado. E agora?</summary><p>Tudo bem. A aula fica gravada por 30 dias. Assista ao vivo o que der, dá até para ouvir no fone enquanto ele brinca, e reveja o resto à noite, no seu tempo.</p></details><details><summary>E se não servir para o meu filho?</summary><p>Você tem 7 dias de garantia. Se não fizer sentido para ele, devolvemos 100% do valor.</p></details><details><summary>Preciso saber exatamente o que está acontecendo com ele para participar?</summary><p>Não. Você não precisa de nenhum papel nem de nenhum nome para entender em que ponto da leitura ele está e qual é o próximo passo. O workshop é sobre como ensinar, não sobre rótulos, e você pode começar a ajudar em casa já na semana seguinte.</p></details><details><summary>Serve para a idade do meu filho?</summary><p>O workshop é sobre o processo de alfabetização, não sobre uma idade. O ponto de partida é o que ele já sabe, seja aos 6 ou aos 10 anos.</p></details><details><summary>Não sou professora. Vou entender?</summary><p>Vai. A Taline explica sem termos técnicos e com exemplos de crianças reais. Famílias e profissionais assistem juntos.</p></details><details><summary>É método fônico? A escola usa outro método.</summary><p>O objetivo não é defender um método por ideologia. É descobrir o que ajuda esta criança a avançar. O som das letras e os recursos de ver, tocar e falar entram como ferramentas, escolhidas a partir da resposta dela.</p></details><details><summary>Ele aprende num ritmo bem diferente dos colegas. Serve?</summary><p>Serve. O workshop foi pensado para crianças que aprendem de formas diferentes. Ele não substitui quem já acompanha a criança; ele te ajuda a entender o processo e a conversar melhor com a escola.</p></details><details><summary>Como recebo o acesso?</summary><p>Logo depois do pagamento, pelo e-mail e WhatsApp cadastrados na compra.</p></details></div></section>
 
 <section class="fechamento"><div class="wrap estreito">
   <h2>Você não está fazendo errado. Você está fazendo sozinha.</h2><p>Você não precisa saber tudo. Precisa saber qual é o próximo passo. Neste sábado, você aprende a enxergar o que o seu filho já sabe, e a hora da lição pode deixar de ser hora de choro.</p>
 <p>Sábado, 14 de novembro, às 9h. Ao vivo, com gravação por 30 dias e 7 dias de garantia.</p>
-  <a class="cta" href="#vagas">Quero minha vaga no workshop</a>
+  <a class="cta" href="https://payfast.greenn.com.br/jdq9qhd" data-cta data-pos="fechamento">Quero minha vaga no workshop</a>
   <p class="chip-lote" data-lote-chip></p>
 </div></section>
 <footer><div class="wrap">Workshop Alfabetização com Intenção · Professora Taline Nogueira · Instituto C&amp;T</div></footer>
-<div class="barra-fixa"><span data-lote-barra></span><a class="cta-barra" href="#vagas">Garantir vaga</a></div>
+<div class="barra-fixa"><span data-lote-barra></span><a class="cta-barra" href="https://payfast.greenn.com.br/jdq9qhd" data-cta data-pos="barra">Garantir vaga</a></div>
 <script>
 (function(){
-  var D={"lotes": [{"nome": "Investimento", "valor": "R$ 67", "prazo": "ou 12x de R$ 6,89 no cartão", "ate": "2026-11-14", "chip": "Investimento: R$ 67 à vista ou 12x de R$ 6,89", "barra": "<b>R$ 67</b> · ou 12x de R$ 6,89"}], "variantes": {"tempo": {"gancho": "Cada criança aprende no seu tempo. O que ela precisa é do próximo passo certo."}, "ler": {"gancho": "\"Será que um dia ele vai ler?\" O que falta pode ser o caminho, não a capacidade."}, "esquece": {"gancho": "Hoje ele faz. Amanhã parece que esqueceu."}, "capacidade": {"gancho": "Quando uma criança não aprende, quase nunca é falta de capacidade."}, "porondecomecar": {"gancho": "Quando a criança ainda não lê, por onde começar?"}}};
+  var D={"lotes": [{"nome": "Investimento", "valor": "R$ 67", "prazo": "ou 12x de R$ 6,89 no cartão", "ate": "2026-11-14", "chip": "Investimento: R$ 67 à vista ou 12x de R$ 6,89", "barra": "<b>R$ 67</b> · ou 12x de R$ 6,89"}], "variantes": {"tempo": {"gancho": "Cada criança aprende no seu tempo. Mas esperar sem saber onde ela travou atrasa ainda mais."}, "licao": {"gancho": "A hora da lição virou choro? Dos dois lados da mesa?"}, "degrau": {"gancho": "Conhece as letras e não junta os sons? Não é preguiça. Falta um degrau."}, "qual": {"gancho": "Apostila, aplicativo, kit de atividades… Não falta atividade. Falta saber qual."}, "ler": {"gancho": "\"Será que um dia ele vai ler?\" O que falta pode ser o caminho, não a capacidade."}, "esquece": {"gancho": "Hoje ele faz. Amanhã parece que esqueceu."}, "capacidade": {"gancho": "Quando uma criança não aprende, quase nunca é falta de capacidade."}, "porondecomecar": {"gancho": "Quando a criança ainda não lê, por onde começar?"}, "detudo": {"gancho": "Você já tentou de tudo? Talvez o que falte não seja mais uma atividade."}}};
   // Lote do dia: o primeiro cuja data final ainda não passou.
   var hoje=new Date(); hoje.setHours(0,0,0,0);
   var atual=D.lotes.find(function(l){return new Date(l.ate+'T23:59:59')>=hoje;})||D.lotes[D.lotes.length-1];
@@ -421,12 +435,34 @@ fbq('init',id);fbq('track','PageView');fbq('track','ViewContent');})();
     if(uc.indexOf(k)>=0){var v=D.variantes[k];
       document.querySelector('[data-hero-gancho]').innerHTML=v.gancho;}
   });
-  // UTMs até o checkout e InitiateCheckout no clique.
+  // Medição no Clarity (06/11/2026). O Meta bloqueia os eventos deste site, então o funil é medido aqui:
+  // entrada → passou_primeira_tela → viu_preco → clique_checkout (+ qual botão), por anúncio (utm_content).
+  function cl(){try{if(window.clarity)clarity.apply(null,arguments);}catch(e){}}
+  var pg=location.pathname.indexOf('professores')>=0?'professores':'pais';
+  cl('set','pagina',pg); if(uc)cl('set','utm_content',uc);
+  var src=new URLSearchParams(location.search).get('utm_source'); if(src)cl('set','utm_source',src);
+  var feito={};
+  function uma(nome){if(feito[nome])return;feito[nome]=1;cl('event',nome);}
+  // UTMs até o checkout, InitiateCheckout (Meta) e clique_checkout (Clarity) no clique.
   var q=location.search.replace(/^\?/,'');
   document.querySelectorAll('[data-cta]').forEach(function(a){
     if(q&&a.href.indexOf('http')===0){a.href+=(a.href.indexOf('?')<0?'?':'&')+q;}
-    a.addEventListener('click',function(){if(window.fbq)fbq('track','InitiateCheckout');});
+    a.addEventListener('click',function(ev){
+      if(window.fbq)fbq('track','InitiateCheckout');
+      cl('event','clique_checkout'); cl('event','clique_checkout_'+(a.getAttribute('data-pos')||'meio'));
+      cl('upgrade','clique_checkout');
+      // segura 250 ms para o evento sair antes de trocar de site
+      if(a.href.indexOf('http')===0&&!ev.ctrlKey&&!ev.metaKey){ev.preventDefault();var h=a.href;setTimeout(function(){location.href=h;},250);}
+    });
   });
+  if('IntersectionObserver' in window){
+    var heroEl=document.querySelector('.hero'), precoEl=document.getElementById('vagas');
+    var o2=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.target===heroEl&&!e.isIntersecting)uma('passou_primeira_tela');
+      if(e.target===precoEl&&e.isIntersecting)uma('viu_preco');
+    });},{threshold:0});
+    if(heroEl)o2.observe(heroEl); if(precoEl)o2.observe(precoEl);
+  }
   // Barra fixa: aparece depois do topo e some enquanto a seção de preço está na tela.
   var barra=document.querySelector('.barra-fixa'),hero=document.querySelector('.hero'),preco=document.getElementById('vagas');
   if(barra&&hero&&'IntersectionObserver' in window){
