@@ -18,7 +18,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--lilas);color:var(--texto);font:400 17px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 main{max-width:560px;margin:0 auto;background:var(--fundo);box-shadow:0 0 40px rgba(74,42,85,.12)}
 h1,h2{font-family:Fraunces,Georgia,serif;color:var(--roxo);font-weight:700;line-height:1.15;letter-spacing:-.01em}
-h1{font-size:30px;margin:14px 0 12px}
+h1{font-size:27px;margin:14px 0 12px}
 h2{font-size:26px;margin:0 0 14px}
 p{margin:0 0 10px}
 img{display:block;max-width:100%}
@@ -93,6 +93,11 @@ footer{text-align:center;font-size:13px;color:#8a7a90;padding:22px 20px 90px}
 .barra-fixa span{font-size:14px}
 .barra-fixa .btn{margin:0;padding:11px 16px;font-size:15px;box-shadow:none}
 @media (max-width:380px){h1{font-size:26px}.hero-vis{height:300px}.hero-foto{height:285px}}
+
+.cena{margin:18px 0 0;padding:16px 18px;border-left:5px solid var(--amarelo);background:#FFF6D6;border-radius:0 12px 12px 0;
+  font:600 19px/1.4 Fraunces,Georgia,serif;color:var(--roxo)}
+.custo{color:var(--lilas);font-size:16px;margin:0 0 4px}
+@media (min-width:900px){.cena{font-size:24px;padding:22px 26px}.custo{font-size:19px}}
 
 /* topo no celular: imagem entre o texto e o botão */
 .hero{display:flex;flex-direction:column}
@@ -185,7 +190,7 @@ footer{text-align:center;font-size:13px;color:#8a7a90;padding:22px 20px 90px}
   <div class="hero-txt">
   <p class="sob">Workshop ao vivo · sábado, 14/11, às 9h · certificado de 6h</p>
   <p class="pq">Para professoras de alunos com deficiência intelectual</p>
-  <h1>Seu aluno com deficiência intelectual ainda não lê? Descubra <mark>em que degrau ele está</mark> e saia com a próxima atividade pronta.</h1>
+  <h1>O ano está acabando e o seu aluno com deficiência intelectual ainda não lê? Em um sábado, você descobre <mark>em que degrau ele está</mark> e sabe exatamente o que fazer a partir de segunda.</h1>
   <p class="lead">Ao vivo, com a professora Taline Nogueira, que alfabetiza na rede pública. Você leva as fichas e as atividades que ela usa na própria sala.</p>
   <a class="btn" href="https://payfast.greenn.com.br/jdq9qhd" data-cta data-pos="topo">Quero minha vaga com certificado</a>
   <p class="preco-linha">R$ 67 ou 12x de R$ 6,89 · garantia de 7 dias</p>
@@ -201,7 +206,8 @@ footer{text-align:center;font-size:13px;color:#8a7a90;padding:22px 20px 90px}
   <div class="dor">
     <div>
       <p>Chega o laudo. Chega a cobrança de adaptar. E você fica sozinha com ele, numa sala cheia.</p>
-      <p>O ano passa, ele passa de ano sem ler, e fica a sensação de que você falhou.</p>
+      <p>No conselho de classe, de novo: "não acompanha". A mãe pergunta "ele vai ler?", e você não sabe o que responder.</p>
+      <p>E no ano que vem ele vai para outra turma, ainda sem ler. Fica a sensação de que você falhou.</p>
       <p class="forte">Você não falhou. Faltou alguém te mostrar o caminho.</p>
     </div>
     <img src="img/taline-aluna.jpg" alt="A professora Taline ao lado de uma aluna" class="dor-foto" style="object-position:40% 50%" loading="lazy">
@@ -233,6 +239,7 @@ footer{text-align:center;font-size:13px;color:#8a7a90;padding:22px 20px 90px}
       <p class="v">Escrevo no relatório o que ele já conquistou</p></div>
   </div>
   <p class="nota">Cobrir pontilhado e copiar letra ocupam o aluno, mas não ensinam a ler. Com a deficiência intelectual, o que muda é o tamanho do passo.</p>
+  <blockquote class="cena">É assim que começa: ele aponta para a palavra e lê sozinho. Não por sorte, mas porque você sabia qual era o degrau dele e qual ajuda dar.</blockquote>
 </section>
 
 <section class="sec escuro metodo">
@@ -338,6 +345,7 @@ footer{text-align:center;font-size:13px;color:#8a7a90;padding:22px 20px 90px}
 
 <section class="sec escuro">
   <h2>Na segunda-feira, o aluno vai ser o mesmo. <span class="am">O seu plano para ele, não.</span></h2>
+  <p class="custo">Se nada mudar, o relatório de fim de ano vai dizer o mesmo que o do meio do ano.</p>
   <a class="btn" href="https://payfast.greenn.com.br/jdq9qhd" data-cta data-pos="fechamento">Quero minha vaga com certificado</a>
   <p class="preco-linha claro">Sábado, 14/11, às 9h · ao vivo · certificado de 6h</p>
 </section>
